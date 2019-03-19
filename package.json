@@ -1,0 +1,53 @@
+{
+	"name": "eleven.vscode.extensions.chrometab",
+	"version": "1.0.0",
+	"description": "Visual Studio Code extension to open a tab inside the IDE",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nekko290/Eleven.VSCode.Extensions.ChromeTab.git"
+	},
+	"keywords": [
+		"Chrome",
+		"Tab"
+	],
+	"author": "José Salvador",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nekko290/Eleven.VSCode.Extensions.ChromeTab/issues"
+	},
+	"homepage": "https://github.com/nekko290/Eleven.VSCode.Extensions.ChromeTab#readme",
+	"engines": {
+		"vscode": "^1.26.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:chromeTab.start",
+		"onWebviewPanel:chromeTab"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "chromeTab.start",
+				"title": "Open Chrome Tab",
+				"category": "Browsers"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -p ./",
+		"watch": "tsc -w -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@types/node": "^10.5.2",
+		"tslint": "^5.11.0",
+		"typescript": "^2.9.2",
+		"vscode": "^1.1.30"
+	}
+}
